@@ -1,0 +1,22 @@
+<mat-card
+  class="card-pokemon"
+  ngClass="{{ cards?.status.types[0]?.type.name }}"
+>
+  <img
+    mat-card-image
+    [src]="cards?.status?.sprites?.front_shiny"
+    [alt]="cards?.name"
+  />
+  <mat-card-content>
+    <ul>
+      <li>
+        <strong> {{ cards?.name }}</strong>
+      </li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button color="primary" (click)="modalDetail(cards)">
+      VER DETALHES
+    </button>
+  </mat-card-actions>
+</mat-card>
